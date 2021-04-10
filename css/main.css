@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Agency FB';
+  src: url('../assets/fonts/AGENCYFB.TTF');
+}
+
+/* @font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Light.ttf') format('truetype');
+  font-weight: lighter;
+} */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+/* @font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+.main-wrapper {
+  background-image: url('../assets/img/background.jpg');
+  background-color: #aaa;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrapper::after {
+  content: ' ';
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../assets/img/Izeepix.png);
+  background-position: top left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+header .logo {
+  width: 200px;
+}
+
+header .logo img {
+  max-width: 100%;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-link-item {
+  margin: 5px;
+}
+
+.nav-link-item a {
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff;
+  display: inline-block;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-link-item a:hover {
+  cursor: pointer;
+  background-color: #f0a500;
+}
+
+.nav-link-item a img {
+  width: 13px;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;;
+}
+
+.center-content {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70%;
+  margin-top: 4%;
+}
+
+.main-title {
+  font-family: 'Agency FB';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+}
+
+.title-description {
+  color: #F0A500;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.main-button {
+  background-color: #F0A500;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  letter-spacing: 0.9px;
+  margin-top: 10px;
+  transition: all 300ms ease-in-out;
+  text-align: center;
+  text-decoration: none;
+}
+
+.main-button:hover {
+  background-color: #f0a500d9;
+  cursor: pointer;
+}
+
+.separator {
+  height: 2px;
+  background-color: #f0a500c7;
+  width: 50%;
+  margin-bottom: 5px;
+  margin-top: 25px;
+}
+
+.pitch {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .main-wrapper::after {
+    height: 85%;
+    width: 50%;
+    background-size: 620px;
+    background-position: right top;
+  }
+
+  header {
+    flex-direction: row;
+    padding: 0 5%;
+    justify-content: space-between;
+  }
+  
+  header .logo {
+    width: 250px;
+  }
+
+  .nav-link-item a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .nav-link-item a img {
+    width: 18px;
+  }
+
+  .main-container {
+    justify-content: flex-end;
+  }
+
+  .center-content {
+    margin-bottom: 10%;
+    margin-top: 0;
+    margin-right: 5%;
+    align-items: flex-end;
+  }
+  
+  .main-title {
+    font-size: 60px;
+  }
+  
+  .title-description {
+    font-size: 17px;
+  }
+
+  .main-button {
+    font-size: 16px;
+    padding: 15px 30px;
+    width: 270px;
+    align-self: flex-end;
+    margin-top: 15px;
+  }
+
+  .pitch {
+    margin-top: 40px;
+  }
+}
